@@ -71,6 +71,9 @@ const randomTransactionId = () => {
 // Delete transaction
 const handleTransactionDelete = (transactionId) => {
   transactions.value = transactions.value.filter((transaction) => transaction.id !== transactionId)
+
+  savedTransactionsToLocalStorage()
+
 }
 
 // Save to localStorage
